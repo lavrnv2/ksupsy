@@ -4,3 +4,7 @@ plugins:
 
 title: Ксю | Цифровой психолог 24/7
 description: Мой сайт на GitHub Pages
+
+show_downloads: false
+github:
+  is_project_page: false
