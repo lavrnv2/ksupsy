@@ -5,56 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title | default: site.title }}</title>
 
-    <!-- Стандартные стили темы Cayman -->
+    <!-- Подключаем стандартные стили темы Cayman -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="description" content="{{ site.description }}">
 
+    <!-- 💅 Нежная стилизация -->
     <style>
-      /* Аватар */
-      .avatar{
-        width:140px;height:140px;border-radius:50%;object-fit:cover;
-        display:block;margin:0 auto 20px auto;box-shadow:0 4px 12px rgba(0,0,0,.15);
+      /* 🪞 Аватар */
+      .avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 20px auto;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       }
 
-      /* Розово-коралловая кнопка в шапке */
-      .btn-primary{
-        background-color:#f0a7a3;color:#fff;border:none;padding:12px 28px;border-radius:6px;
-        font-size:17px;font-weight:600;text-decoration:none;display:inline-block;
-        box-shadow:0 3px 6px rgba(0,0,0,.15);transition:all .25s ease;
+      /* 💬 Основная кнопка */
+      .btn-primary {
+        background-color: #f0a7a3; /* приглушённый коралл */
+        color: #fff;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 6px;
+        font-size: 17px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        transition: all 0.25s ease;
+        display: inline-block;
       }
-      .btn-primary:hover{background-color:#ec8e88;transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,.25)}
-
-      /* Контент */
-      .main-content{max-width:720px;margin:0 auto;padding:40px 20px;line-height:1.7}
-
-      /* Ряд нижних кнопок */
-      .button-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
-
-      /* ВАЖНО: переопределяем .btn для светлого фона (иначе в Cayman текст почти не виден) */
-      .main-content .btn{
-        background:#159957;           /* фирменный зелёный из градиента темы */
-        color:#fff !important;
-        border:none;border-radius:6px;
-        padding:12px 22px;font-size:16px;text-decoration:none;display:inline-block;
-        box-shadow:0 2px 6px rgba(0,0,0,.12);transition:all .2s ease;
+      .btn-primary:hover {
+        background-color: #ec8e88;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
       }
-      .main-content .btn:hover{background:#127a46;transform:translateY(-2px)}
-      
-      /* Футер */
-      .site-footer{text-align:center;font-size:14px;color:#666;margin-top:50px;padding-top:20px;border-top:1px solid #eee}
+
+      /* 🌿 Контент */
+      .main-content {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        text-align: left;
+        line-height: 1.7;
+      }
+
+      /* ⚖️ Кнопки документов */
+      .button-row {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+      .button-row .btn {
+        padding: 12px 22px;
+        font-size: 16px;
+      }
+
+      /* 🌸 Футер */
+      .site-footer {
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+      }
     </style>
   </head>
 
   <body>
     <section class="page-header">
+      <!-- 🪞 Аватар -->
       <img src="/assets/avatar.jpg" alt="Ксю — цифровой психолог" class="avatar">
 
       <h1 class="project-name">{{ site.title }}</h1>
-      <!-- удалено: подзаголовок с description
-      {% if site.description %}
+      
+      <!-- удалили блок description -->
+      <!-- {% if site.description %}
         <h2 class="project-tagline">{{ site.description }}</h2>
       {% endif %} -->
 
+      <!-- 💬 Кнопка в гармоничных цветах -->
       <a href="https://t.me/ksupsy_bot" class="btn-primary">💬 Написать Ксю</a>
     </section>
 
@@ -71,14 +105,14 @@
       <h3>Безопасность</h3>
       <p>Ксю не собирает лишних данных и не передаёт информацию третьим лицам. Все сообщения конфиденциальны.</p>
 
-      <!-- Две большие кнопки в стиле темы -->
+      <!-- 🔗 Кнопки "Правила" и "Политика" -->
       <div class="button-row">
         <a href="/rules.html" class="btn">Правила использования</a>
         <a href="/privacy.html" class="btn">Политика конфиденциальности</a>
       </div>
 
       <footer class="site-footer">
-        <span>© 2025 {{ site.title }} — цифровой психолог онлайн</span>
+        <span>© 2025 {{ site.title }} — Ксю | Цифровой психолог 24/7</span>
       </footer>
     </section>
   </body>
