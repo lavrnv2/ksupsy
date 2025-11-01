@@ -96,10 +96,8 @@
 
   <body>
     <section class="page-header">
-      <!-- 🪞 Аватар (показываем только на главной странице) -->
-      {% if page.url == "/" or page.url == "/index.html" %}
-        <img src="/assets/avatar.jpg" alt="Ксю — цифровой психолог" class="avatar">
-      {% endif %}
+      <!-- 🪞 Аватар на всех страницах -->
+      <img src="/assets/avatar.jpg" alt="Ксю — цифровой психолог" class="avatar">
 
       <h1 class="project-name">{{ page.title | default: site.title }}</h1>
       <h2 class="project-tagline">Быстро. Анонимно. Всегда</h2>
@@ -110,6 +108,13 @@
 
     <section class="main-content">
       {{ content }}
+
+      <!-- 🏠 Кнопка "На главную" для страниц rules и privacy -->
+      {% if page.url != "/" and page.url != "/index.html" %}
+        <div class="button-row" style="margin-top: 40px;">
+          <a href="/" class="btn-primary">🏠 На главную</a>
+        </div>
+      {% endif %}
 
       <footer class="site-footer">
         <span>© 2025 {{ site.title }} — цифровой психолог онлайн</span>
